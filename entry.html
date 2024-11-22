@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry Page</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/entry.css">
+</head>
+<body>
+    <div class="container justify-center flex-column text-center">
+        <h1>Entry Form</h1>
+        <p class="reduceMargin">Use the form below to enter an order for engraving</p>
+        <form class="insertentry" action="php/newEntry.php" method="post">
+            <label for="invoice">Invoice #
+                <input id="invoice" type="text" name="invoice">
+            </label>
+            <label for="product">Product #
+                <input id="product" type="text" name="product">
+            </label>
+            <label for="design">Design #
+                <input id="design" type="text" name="design">
+            </label>
+            <label for="font">Font
+                <input id="font" type="text" name="font">
+            </label>
+            <button>Send new entry</button>
+        </form>
+    </div>
+    <div id="logobox"><img src="images/logo.png"></div>
+    <a href="index.php" class="homeButton">HOME</a>
+</body>
+</html>
