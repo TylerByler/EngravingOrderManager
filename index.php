@@ -17,8 +17,8 @@
 <body>
     <div class="container flex-column justify-center text-center">
         <h1>Engraving Order Main Menu</h1>
-        <a href="/entry.html" class="btn">Create a new order</a>
-        <a href="/orders.html" class="btn">Orders</a>
+        <a href="entry.php" class="btn">Create a new order</a>
+        <a href="orders.php" class="btn">Orders</a>
     </div>
     <div id="logobox"><img src="images/logo.png"></div>
 </body>

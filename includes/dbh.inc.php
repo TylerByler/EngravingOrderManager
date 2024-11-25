@@ -1,8 +1,8 @@
 <?php
 
-$dsn = "mysql:localhost;dbname=engraving_orders";
+$dsn = "mysql:host=localhost;dbname=millertech_engraving";
 $dbusername = "root";
-$dbpassword = "ITinfo";
+$dbpassword = "";
 
 try {
     $pdo = new PDO($dsn, $dbusername, $dbpassword);

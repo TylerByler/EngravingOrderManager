@@ -1,3 +1,24 @@
+<?php
+
+try {
+    require_once "includes/dbh.inc.php";
+
+    $query = "SELECT * FROM orders;";
+
+    $stmt = $pdo->prepare($query);
+
+    $stmt->execute();
+
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $pdo = null;
+    $stmt = null;
+
+} catch (PDOException $e) {
+    die("Query failed: ". $e->getMessage());
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +38,20 @@
             <div class="column-title">DESIGN #</div>
             <div class="column-title right-title">FONT</div>
          </div>
+         <?php
+            if (empty($results)) {
+                echo "No Results";
+            } else {
+                foreach ($results as $row) {
+                    echo "<div class=\"justify-center text-center\">";
+                    echo htmlspecialchars($row["invoice_number"]);
+                    echo htmlspecialchars($row["salesperson_name"]);
+                    echo "</div>";
+                }
+            }
+        ?>
     </div>
+    
     <div id="logobox"><img src="images/logo.png"></div>
 </body>
 </html>
