@@ -1,8 +1,14 @@
 <?php
 
-$dsn = "mysql:host=localhost;dbname=millertech_engraving";
+$file = file_get_contents("C:\\xampp\htdocs\EngravingOrderManager\includes\sql.info.json");
+
+$sqlhost = json_decode($file);
+
+/* print($sqlhost->address); */
+
+$dsn = "mysql:host=" . $sqlhost->address . ";dbname=millertech_engraving";
 $dbusername = "root";
-$dbpassword = "";
+$dbpassword = "root_password";
 
 try {
     $pdo = new PDO($dsn, $dbusername, $dbpassword);
