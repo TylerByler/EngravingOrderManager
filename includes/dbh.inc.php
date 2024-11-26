@@ -1,6 +1,6 @@
 <?php
 
-$file = file_get_contents("C:\\xampp\htdocs\EngravingOrderManager\includes\sql.info.json");
+$file = file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/EngravingOrderManager/includes/sql.info.json");
 
 $sqlhost = json_decode($file);
 
