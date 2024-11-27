@@ -1,0 +1,50 @@
+:root {
+    --mtblue: #253f8e;
+}
+
+/* UTILITIES */
+.column-titles-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: .5rem;
+}
+
+.column-title {
+    border: 0.1rem solid var(--mtblue);
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 550;
+    padding: 1rem 0;
+    margin: -0.05rem;
+    color: white;
+    background-color: var(--mtblue);
+}
+
+.left-title {
+    border-radius: 0.5rem 0 0 0;
+}
+
+.right-title {
+    border-radius: 0 0.5rem 0 0;
+}
+
+.order-container {
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.order-column {
+    width:100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid #253f8e;
+    margin: -0.05rem;
+    padding: 1rem 0;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}

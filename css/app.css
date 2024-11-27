@@ -1,4 +1,6 @@
 :root {
+    --mtblue: #253f8e;
+
     background-color: #ecf5ff;
     font-size: 62.5%;
 }
@@ -20,7 +22,7 @@ h4 {
 
 h1 {
     font-size: 5.4rem;
-    color: #253f8e;
+    color: var(--mtblue);
     margin-bottom: 5rem;
 }
 
@@ -49,14 +51,14 @@ P {
 input {
     height: 6rem;
     width: 40rem;
-    border: 0.2rem solid #253f8e;
+    border: 0.2rem solid var(--mtblue);
     border-radius: .5rem;
     margin: 0.5rem 0 2rem 0;
     text-align: center;
 }
 
 input:focus {
-    border: 0.2rem solid #253f8e;
+    border: 0.2rem solid var(--mtblue);
     box-shadow: 0 0.4rem 1.4rem 0 rgba(53, 168, 226, 0.5);
     transition: box-shadow 150ms;
 }
@@ -81,7 +83,7 @@ button {
     border-radius: 0.5rem;
     width: 15rem;
     height: 6rem;
-    background-color: #253f8e;
+    background-color: var(--mtblue);
     color: white;
     font-size: 1.5rem;
     font-weight: 550;
@@ -141,10 +143,10 @@ button:hover {
     padding: 1rem 0;
     width: 20rem;
     text-align: center;
-    border: 0.1rem solid #253f8e;
+    border: 0.1rem solid var(--mtblue);
     margin-bottom: 1rem;
     text-decoration: none;
-    color: #253f8e;
+    color: var(--mtblue);
     background-color: white;
 }
 
@@ -165,6 +167,7 @@ button:hover {
     position: fixed;
     bottom: 0;
     right: 0;
+
 }
 
 #logobox > img {
@@ -178,7 +181,7 @@ button:hover {
     position: fixed;
     top: 0.8rem;
     left: 0.8rem;
-    background-color: #253f8e;
+    background-color: var(--mtblue);
     height: 4rem;
     width: 8rem;
     border-radius: 0.5rem;
@@ -196,26 +199,17 @@ button:hover {
     transition: transform 150ms;
 }
 
-.column-titles-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: white;
-    border-radius: .5rem;
-}
+/* ANIMATIONS */
+@keyframes logoCycle {
+    0% {
+        bottom: 0;
+    }
 
-.column-title {
-    border: 0.1rem solid #253f8e;
-    width: 100%;
-    font-size: 1.3rem;
-    font-weight: 550;
-    padding: 1rem 0;
-}
+    50% {
+        bottom: 10rem;
+    }
 
-.left-title {
-    border-radius: 0.5rem 0 0 0;
-}
-
-.right-title {
-    border-radius: 0 0.5rem 0 0;
+    100% {
+        bottom: 0;
+    }
 }
