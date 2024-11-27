@@ -1,6 +1,6 @@
 <?php
 
-if ($_SERVER["REQUEST_METHOD"]== "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $invoice_number = $_POST["invoice_number"];
     $salesperson_name = $_POST["salesperson_name"];
 

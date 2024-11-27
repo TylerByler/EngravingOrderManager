@@ -6,9 +6,9 @@ $sqlhost = json_decode($file);
 
 /* print($sqlhost->address); */
 
-$dsn = "mysql:host=" . $sqlhost->address . ";dbname=millertech_engraving";
-$dbusername = "root";
-$dbpassword = "root_password";
+$dsn = "mysql:host=" . $sqlhost->address . ";dbname=" . $sqlhost->dbname;
+$dbusername = $sqlhost->user;
+$dbpassword = $sqlhost->password;
 
 try {
     $pdo = new PDO($dsn, $dbusername, $dbpassword);

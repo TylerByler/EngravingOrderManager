@@ -3,7 +3,7 @@
 try {
     require_once "includes/dbh.inc.php";
 
-    $query = "SELECT * FROM orders;";
+    $query = "SELECT * FROM orders ORDER BY `orders`.`creation_date` DESC;";
 
     $stmt = $pdo->prepare($query);
 
@@ -38,36 +38,32 @@ try {
             <div class="column-title">Salesperson</div>
             <div class="column-title right-title">Date Created</div>
         </div>
-        <a href=<?php ?> class="order-link">
-            <div class="order-container">
-                <div class="order-column">INVOICE_NUMBER</div>
-                <div class="order-column">SALESPERSON_NAME</div>
-                <div class="order-column">DATETIME</div>
-            </div>
-        </a>
          <?php
-            /* if (empty($results)) {
+            if (empty($results)) {
                 echo "No Results";
             } else {
                 foreach ($results as $row) {
-                    echo "<div class=\"justify-center text-center\">";
-                    echo htmlspecialchars($row["invoice_number"]);
-                    echo htmlspecialchars($row["salesperson_name"]);
-                    echo "</div>";
+                    echo "<a href=\"selectedorder.php?invoice=" . htmlspecialchars($row['invoice_number']) . "\" class=\"order-link\">";
+                        echo "<div class=\"order-container\">";
+                            echo "<div class=\"order-column\">" . htmlspecialchars($row['invoice_number']) . "</div>";
+                            echo "<div class=\"order-column\">" . htmlspecialchars($row['salesperson_name']) . "</div>";
+                            echo "<div class=\"order-column\">" . htmlspecialchars($row['creation_date']) . "</div>";
+                        echo "</div>";
+                    echo "</a>";
                 }
-            } */
+            }
         ?>
     </div>
     
-    <!-- <div id="logobox"><img src="images/logo.png"></div> -->
+    <div id="logobox"><img src="images/logo.png"></div>
 
-    <div class="order-drawer-layer">
+    <!-- <div class="order-drawer-layer">
         <div class="order-drawer">
             <div class="logobox-container">
                 <div class="logobox-styler"></div>
                 <div class="logobox"><img src="images/logo.png"/></div>
             </div>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>

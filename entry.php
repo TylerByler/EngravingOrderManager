@@ -11,26 +11,22 @@
     <div class="container justify-center flex-column text-center">
         <h1>Entry Form</h1>
         <p class="reduceMargin">Use the form below to enter an order for engraving</p>
-        <form class="insertentry" action="includes/formhandler.inc.php" method="post">
-            <label for="invoice_number">Invoice #
-                <input id="invoice_number" type="text" name="invoice_number">
-            </label>
-            <label for="salesperson_name">salesperson_name
-                <input id="salesperson_name" type="text" name="salesperson_name">
-            </label>
-           <!--  <label for="product_number">Product #
-                <input id="product_number" type="text" name="product_number">
-            </label>
-            <label for="design_number">Design #
-                <input id="design_number" type="text" name="design_number">
-            </label>
-            <label for="font">Font
-                <input id="font" type="text" name="font">
-            </label> -->
-            <button>Send new entry</button>
-        </form>
+        <div class="">
+            <div class="label-wrapper">
+                <label for="invoice_number">Invoice #
+                    <input id="invoice_number" type="text" name="invoice_number">
+                </label>
+            </div>
+            <div class="label-wrapper">
+                <label for="salesperson_name">Salesperson
+                    <input id="salesperson_name" type="text" name="salesperson_name">
+                </label>
+            </div>
+            <a id="stgOneBtn" class="btn">Send new entry</a>
+        </div>
     </div>
     <div id="logobox"><img src="images/logo.png"></div>
     <a href="index.php" class="homeButton">HOME</a>
+    <script src="entry.js"></script>
 </body>
 </html>

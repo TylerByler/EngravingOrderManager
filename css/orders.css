@@ -42,7 +42,7 @@ a {
 
 .order-column {
     width:100%;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     border: 0.1rem solid #253f8e;
     margin: -0.05rem;
     padding: 1rem 0;
@@ -54,7 +54,6 @@ a {
     overflow: hidden;
     width: 100vw;
     height: 100vh;
-    max-width: 100rem;
     margin: 0 auto;
     padding: 2rem;
     z-index: 10000;
@@ -72,10 +71,6 @@ a {
     display: flex;
     flex-direction: row;
     width:100%;
-    /* animation-name: position-test;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear; */
 }
 
 .logobox-styler {
@@ -85,19 +80,10 @@ a {
     border-radius: 0 0 2rem 0;
 }
 
-.logobox > img {
+.logobox {
     border-radius: 2rem 2rem 0 0;
 }
 
-/* ANIMATIONS */
-@keyframes position-test {
-    0% {
-        transform: translateY(-10rem);
-    }
-    50% {
-        transform: translateY(0rem);
-    }
-    100% {
-        transform: translateY(-10rem);
-    }
+.logobox > img {
+    border-radius: 2rem 2rem 0 0;
 }
