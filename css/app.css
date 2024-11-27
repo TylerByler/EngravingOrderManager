@@ -163,17 +163,6 @@ button:hover {
     transform: none;
 }
 
-#logobox {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-
-}
-
-#logobox > img {
-    border-radius: 2rem 0 0 0;
-}
-
 .homeButton {
     display:flex;
     flex-direction: column;
@@ -197,19 +186,4 @@ button:hover {
     box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
-}
-
-/* ANIMATIONS */
-@keyframes logoCycle {
-    0% {
-        bottom: 0;
-    }
-
-    50% {
-        bottom: 10rem;
-    }
-
-    100% {
-        bottom: 0;
-    }
 }

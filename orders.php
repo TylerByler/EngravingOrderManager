@@ -59,6 +59,15 @@ try {
         ?>
     </div>
     
-    <div id="logobox"><img src="images/logo.png"></div>
+    <!-- <div id="logobox"><img src="images/logo.png"></div> -->
+
+    <div class="order-drawer-layer">
+        <div class="order-drawer">
+            <div class="logobox-container">
+                <div class="logobox-styler"></div>
+                <div class="logobox"><img src="images/logo.png"/></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
