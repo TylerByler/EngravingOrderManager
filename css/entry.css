@@ -1,0 +1,47 @@
+.stg-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.form-header {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.form-header > p {
+    color: white;
+    background-color: #253f8e;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.hidden > .form-header > p {
+    display: none;
+}
+
+form > .label-wrapper {
+    margin:0 -0.15rem 0 0;
+    border-radius: 0;
+}
+
+.label-wrapper {
+    background-color: var(--mtblue);
+    border-radius: 0.5rem;
+    padding: 0.7rem 0 0 0;
+    margin: 0.5rem;
+    width: 100%;
+}
+
+.label-wrapper > label {
+    color: white;
+}
+
+#stg2 {
+    flex-direction: column;
+}
