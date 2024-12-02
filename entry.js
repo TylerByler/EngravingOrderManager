@@ -2,8 +2,9 @@ const stgOneBtn = document.getElementById("stgOneBtn");
 const stgArray = Array.from(document.getElementsByClassName("stg"));
 const invoice_number = document.getElementById("invoice_number_temp");
 const salesperson_name = document.getElementById("salesperson_name_temp");
+const entryInput = document.getElementById("num_entries");
 
-const form = document.getElementsByName("entryForm");
+const form = document.getElementById("entryForm");
 const addEntry = document.getElementById("addEntry");
 const removeEntry = document.getElementById("removeEntry");
 
@@ -33,7 +34,47 @@ stgOneBtn.addEventListener("click", () => {
 
 addEntry.addEventListener("click", () => {
     numEntries++;
+    entryInput.value = numEntries;
     
+    const newElement = document.createElement("div");
+
+    newElement.setAttribute("name", `entry${numEntries}`);
+    newElement.setAttribute("class", "general-wrapper");
+
+    newElement.innerHTML = `
+                                <div class="label-wrapper left-end">
+                                    <label for="product_number${numEntries}">Product #
+                                        <input type="text" name="product_number${numEntries}" id="product_number${numEntries}">
+                                    </label>
+                                </div>
+                                <div class="label-wrapper mid-column">
+                                    <label for="product_desc${numEntries}">Product Description
+                                        <input type="text" name="product_desc${numEntries}" id="product_desc${numEntries}">
+                                    </label>
+                                </div>
+                                <div class="label-wrapper mid-column">
+                                    <label for="color${numEntries}">Color
+                                        <input type="text" name="color${numEntries}" id="color${numEntries}">
+                                    </label>
+                                </div>
+                                <div class="label-wrapper mid-column">
+                                    <label for="design_number${numEntries}">Design #
+                                        <input type="text" name="design_number${numEntries}" id="design_number${numEntries}">
+                                    </label>
+                                </div>
+                                <div class="label-wrapper mid-column">
+                                    <label for="font${numEntries}">Font
+                                        <input type="text" name="font${numEntries}" id="font${numEntries}">
+                                    </label>
+                                </div>
+                                <div class="label-wrapper right-end">
+                                    <label for="engraving_desc${numEntries}">Engraving Description
+                                        <input type="text" name="engraving_desc${numEntries}" id="engraving_desc${numEntries}">
+                                    </label>
+                                </div>
+                            `;
+
+    form.appendChild(newElement);
 });
 
 removeEntry.addEventListener("click", () => {
@@ -41,8 +82,10 @@ removeEntry.addEventListener("click", () => {
         return;
     }
 
+    form.lastChild.remove();
+    
     numEntries--;
-
+    entryInput.value = numEntries;
 });
 
 printValues = () => {
