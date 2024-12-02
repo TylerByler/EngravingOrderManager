@@ -1,41 +1,52 @@
 const stgOneBtn = document.getElementById("stgOneBtn");
-const stg1 = document.getElementById("stg1");
-const stg2 = document.getElementById("stg2");
-const invoice_header = document.getElementById("invoice-header");
-const salesperson_header = document.getElementById("salesperson-header");
-const invoice_number = document.getElementById("invoice_number");
-const salesperson_name = document.getElementById("salesperson_name");
-var invoice_number_temp;
-var salesperson_name_temp;
+const stgArray = Array.from(document.getElementsByClassName("stg"));
+const invoice_number = document.getElementById("invoice_number_temp");
+const salesperson_name = document.getElementById("salesperson_name_temp");
 
+const form = document.getElementsByName("entryForm");
+const addEntry = document.getElementById("addEntry");
+const removeEntry = document.getElementById("removeEntry");
 
-console.log("invoice_number: ", invoice_number_temp);
-console.log("salesperson_name: ", salesperson_name_temp);
+var numEntries = 1;
 
 stgOneBtn.addEventListener("click", () => {
-    invoice_number_temp = document.getElementById("invoice_number_temp").value;
-    salesperson_name_temp = document.getElementById("salesperson_name_temp").value;
-
-    printValues();
-
-    if (invoice_number_temp == "" || salesperson_name_temp == "") {
+    if (invoice_number.value == "" || salesperson_name.value == "") {
         // TELL USER INVALID INPUT
-        document.getElementById("invoice_number_temp").value = "";
-        document.getElementById("salesperson_name_temp").value = "";
+        invoice_number.value = "";
+        salesperson_name.value = "";
     } else {
-        stg1.classList.add("hidden");
-        stg2.classList.remove("hidden");
+        stgArray.forEach(element => {
+            if(element.classList.contains("hidden")) {
+                element.classList.remove("hidden");
+            } else {
+                element.classList.add("hidden");
+            }
+        });
 
-        invoice_header.innerText = "Invoice #" + invoice_number_temp;
-        salesperson_header.innerText = "Salesperson: " + salesperson_name_temp;
+        document.getElementById("invoice-header").innerText = "Invoice #" + invoice_number.value;
+        document.getElementById("salesperson-header").innerText = "Salesperson: " + salesperson_name.value;
 
-        invoice_number.value = invoice_number_temp;
-        salesperson_name.value = salesperson_name_temp;
+        document.getElementById("invoice_number").value = invoice_number.value;
+        document.getElementById("salesperson_name").value = salesperson_name.value;
     }
+});
+
+addEntry.addEventListener("click", () => {
+    numEntries++;
+    
+});
+
+removeEntry.addEventListener("click", () => {
+    if (numEntries <= 1) {
+        return;
+    }
+
+    numEntries--;
+
 });
 
 printValues = () => {
     console.log("Print New Values")
-    console.log(invoice_number_temp.value);
-    console.log(salesperson_name_temp.value);
+    console.log(invoice_number.value);
+    console.log(salesperson_name.value);
 }

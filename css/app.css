@@ -73,29 +73,7 @@ label {
 
 form {
     margin-top: 3rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     width: 100%;
-}
-
-button {
-    border: 0;
-    border-radius: 0.5rem;
-    width: 15rem;
-    height: 6rem;
-    background-color: var(--mtblue);
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 550;
-    margin-top: 1rem;
-}
-
-button:hover {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
-    transform: translateY(-0.1rem);
-    transition: transform 150ms;
 }
 
 /* UTILITIES */
@@ -105,13 +83,22 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 100rem;
+    max-width: 125rem;
     margin: 0 auto;
     padding: 2rem;
 }
 
 .container > * {
     width: 100%;
+}
+
+.general-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
 }
 
 .flex-column {
@@ -134,6 +121,11 @@ button:hover {
 
 .reduceMargin {
     margin-top: -3rem;
+    margin-bottom: 3rem;
+}
+
+.fit-content {
+    width: fit-content;
 }
 
 .hidden {
