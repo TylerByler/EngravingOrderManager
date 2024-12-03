@@ -4,8 +4,6 @@ $file = file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/EngravingOrderManager/in
 
 $sqlhost = json_decode($file);
 
-/* print($sqlhost->address); */
-
 $dsn = "mysql:host=" . $sqlhost->address . ";dbname=" . $sqlhost->dbname;
 $dbusername = $sqlhost->user;
 $dbpassword = $sqlhost->password;
