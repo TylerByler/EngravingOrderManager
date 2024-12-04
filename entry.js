@@ -41,7 +41,7 @@ addEntry.addEventListener("click", () => {
     newElement.setAttribute("name", `entry${numEntries}`);
     newElement.setAttribute("class", "general-wrapper");
 
-    newElement.innerHTML = `
+    /*newElement.innerHTML = `
                                 <div class="label-wrapper left-end">
                                     <label for="product_number${numEntries}">Product #
                                         <input type="text" name="product_number${numEntries}" id="product_number${numEntries}">
@@ -70,6 +70,39 @@ addEntry.addEventListener("click", () => {
                                 <div class="label-wrapper right-end">
                                     <label for="engraving_desc${numEntries}">Engraving Description
                                         <input type="text" name="engraving_desc${numEntries}" id="engraving_desc${numEntries}">
+                                    </label>
+                                </div>
+                            `; */
+
+    newElement.innerHTML = `
+                                <div class="label-wrapper left-end">
+                                    <label for="product_number[]">Product #
+                                        <input type="text" name="product_number[]">
+                                    </label>
+                                </div>
+                                <div class="label-wrapper mid-column">
+                                    <label for="product_desc[]">Product Description
+                                        <input type="text" name="product_desc[]">
+                                    </label>
+                                </div>
+                                <div class="label-wrapper mid-column">
+                                    <label for="color[]">Color
+                                        <input type="text" name="color[]">
+                                    </label>
+                                </div>
+                                <div class="label-wrapper mid-column">
+                                    <label for="design_number[]">Design #
+                                        <input type="text" name="design_number[]">
+                                    </label>
+                                </div>
+                                <div class="label-wrapper mid-column">
+                                    <label for="font[]">Font
+                                        <input type="text" name="font[]">
+                                    </label>
+                                </div>
+                                <div class="label-wrapper right-end">
+                                    <label for="engraving_desc[]">Engraving Description
+                                        <input type="text" name="engraving_desc[]">
                                     </label>
                                 </div>
                             `;

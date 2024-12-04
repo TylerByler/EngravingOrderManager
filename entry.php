@@ -37,7 +37,7 @@
                 <p id="salesperson-header"></p>
             </div>
 
-            <form id="entryForm" name="entryForm" action="includes/formhandler.inc.php" method="post">
+            <form id="entryForm" name="entryForm" action="includes/test.inc.php" method="post">
 
                 <input type="hidden" name="invoice_number" id="invoice_number">
                 <input type="hidden" name="salesperson_name" id="salesperson_name">
@@ -45,33 +45,33 @@
 
                 <div name="entry1" class="general-wrapper">
                     <div class="label-wrapper left-end">
-                        <label for="product_number">Product #
-                            <input type="text" name="product_number" id="product_number">
+                        <label for="product_number[]">Product #
+                            <input type="text" name="product_number[]">
                         </label>
                     </div>
                     <div class="label-wrapper mid-column">
-                        <label for="product_desc">Product Description
-                            <input type="text" name="product_desc" id="product_desc">
+                        <label for="product_desc[]">Product Description
+                            <input type="text" name="product_desc[]">
                         </label>
                     </div>
                     <div class="label-wrapper mid-column">
-                        <label for="color">Color
-                            <input type="text" name="color" id="color">
+                        <label for="color[]">Color
+                            <input type="text" name="color[]">
                         </label>
                     </div>
                     <div class="label-wrapper mid-column">
-                        <label for="design_number">Design #
-                            <input type="text" name="design_number" id="design_number">
+                        <label for="design_number[]">Design #
+                            <input type="text" name="design_number[]">
                         </label>
                     </div>
                     <div class="label-wrapper mid-column">
-                        <label for="font">Font
-                            <input type="text" name="font" id="font">
+                        <label for="font[]">Font
+                            <input type="text" name="font[]">
                         </label>
                     </div>
                     <div class="label-wrapper right-end">
-                        <label for="engraving_desc">Engraving Description
-                            <input type="text" name="engraving_desc" id="engraving_desc">
+                        <label for="engraving_desc[]">Engraving Description
+                            <input type="text" name="engraving_desc[]">
                         </label>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                     <button class="btn changeEntry" id="addEntry">+</button>
                 </div>
             </div>
-            <button for="entryForm" class="btn">Submit New Order</button>
+            <button form="entryForm" class="btn">Submit New Order</button>
         </div>
 
     </div>
