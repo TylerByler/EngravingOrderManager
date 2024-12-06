@@ -37,7 +37,7 @@
                 <p id="salesperson-header"></p>
             </div>
 
-            <form id="entryForm" name="entryForm" action="includes/test.inc.php" method="post">
+            <form id="entryForm" name="entryForm" action="includes/formhandler.inc.php" method="post">
 
                 <input type="hidden" name="invoice_number" id="invoice_number">
                 <input type="hidden" name="salesperson_name" id="salesperson_name">
